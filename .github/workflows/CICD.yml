@@ -24,7 +24,7 @@ jobs:
     - name: Decode and verify
       run: |
         echo "Decoding DATABASE secret"
-        echo "${{ secrets.DATABASE }}" | base64 -d > ./src/main/resources/application-db.yml
+        echo "${{ secrets.SECRET }}" | base64 -d > ./src/main/resources/application-db.yml
         echo "Decoding JWT secret"
         echo "${{ secrets.JWT }}" | base64 -d > ./src/main/resources/application-jwt.yml
         echo "Decoding OAUTH secret"
